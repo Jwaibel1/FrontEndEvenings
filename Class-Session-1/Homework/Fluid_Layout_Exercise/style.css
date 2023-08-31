@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: lightcyan;
+}
+
+header {
+  background-color: lightseagreen;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  text-align: center;
+}
+
+.services,
+.main-content,
+.testimonials {
+  background-color: rgba(85, 85, 182, 0.596);
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: lightseagreen;
+}
+
+.main-content {
+  width: 50%;
+  float: left;
+}
+
+.services {
+  width: 25%;
+  float: left;
+}
+
+.testimonials {
+  width: 25%;
+  float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .services,
+  .main-content,
+  .testimonials {
+    float: none;
+    width: 100%;
+  }
+}

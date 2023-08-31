@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+}
+
+a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  border-bottom: 2px solid black;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 5px;
+}
+
+footer {
+  box-sizing: border-box;
+  background-color: lightslategray;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 2px;
+  font-size: 1.5rem;
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  margin: 20px;
+}
+
+h3 {
+  margin: 10px;
+}
+
+section {
+  margin: 0;
+}
+
+p {
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    width: 25%;
+    float: left;
+  }
+
+  .contact {
+    width: 25%;
+    float: right;
+  }
+
+  .projects {
+    float: none;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .about,
+  .contact {
+    width: 33.33%;
+  }
+
+  .projects {
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+  /* .about,
+  .projects,
+  .contact {
+    float: none;
+    width: 100%;
+  } */
+}

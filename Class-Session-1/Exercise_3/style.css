@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+}
+.paragraph {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  z-index: 1;
+  position: relative;
+}
+img {
+  margin-top: 10px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}

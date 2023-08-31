@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  font-size: 3rem;
+  color: aquamarine;
+}
+
+@media screen and (max-width: 600px) {
+  .text {
+    color: black;
+    transition-duration: 0.5s;
+  }
+}
