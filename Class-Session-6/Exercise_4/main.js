@@ -18,4 +18,5 @@ const Bill = new Person("Bill", 15);
 Jim.greet();
 Bill.greet();
 
-Person.info(); // static methods can't be called on instances
+Person.info();
+// static methods can't be called on instances

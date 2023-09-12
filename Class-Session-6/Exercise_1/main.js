@@ -9,19 +9,22 @@ const person = {
   lastName: "Waibel",
   age: 26,
   fullName: function () {
-    return this.firstName + " " + this.lastName;
+    return console.log(this.firstName + " " + this.lastName);
   },
 };
 
-console.log(person.fullName());
+person.fullName();
 
 const animal = {
   name: "Jake",
   species: "Dog",
   breed: "Jack Russell",
   pet: () => {
-    return `this is my ${animal.species}, his name is ${animal.name} and he is a ${animal.breed}`;
+    return console.log(
+      `this is my ${animal.species}, his name is ${animal.name} and he is a ${animal.breed}`
+      // this. instead of animal. returns undefined for each
+    );
   },
 };
 
-console.log(animal.pet());
+animal.pet();

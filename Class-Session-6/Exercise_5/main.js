@@ -4,15 +4,15 @@ class Person {
     this.age = age;
   }
 
-  get newAge() {
-    return this.age;
+  get age() {
+    return this._age;
   }
 
-  set newAge(value) {
+  set age(value) {
     if (value < 0) {
       console.log("You can't be a negative age!");
     } else {
-      this.age = value;
+      this._age = value;
     }
   }
 
@@ -27,9 +27,10 @@ class Person {
 
 const Jim = new Person("Jim", 20);
 const Bill = new Person("Bill", 15);
-const Karen = new Person("Karen", 30);
+
 Jim.greet();
 Bill.greet();
-Karen.greet();
+
+const Karen = new Person("Karen", -30);
 
 Person.info();
