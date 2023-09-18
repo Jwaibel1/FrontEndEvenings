@@ -4,29 +4,49 @@ class Subject {
   }
 
   addObserver(observer) {
-    // TODO: Add observer to the list
+    this.observers.push(observer);
+    console.log("Added a New Observer");
   }
 
   removeObserver(observer) {
-    // TODO: Remove observer from the list
+    this.observers = this.observers.filter((obs) => obs !== observer);
+    console.log("Removed an Observer");
   }
 
   notifyObservers(data) {
-    // TODO: Notify all observers with given data
+    this.observers.forEach((observer) => observer.update());
+    console.log("Observers Updated");
   }
 
   async fetchAndNotify() {
     const url = "https://jsonplaceholder.typicode.com/posts?_limit=10";
 
-    // TODO: Fetch data from the API and notify observers
+    try {
+      const data = await fetch(
+        "https://jsonplaceholder.typicode.com/posts?_limit=10"
+      );
+      const res = await data.json();
+      console.log("POSTS:", res);
+    } catch (err) {
+      console.log("error", err);
+    }
   }
 }
 
 class Observer {
   update(data) {
-    // TODO: Handle the received data. If it's an error message, log it.
-    // If it's the list of posts, destructure and log the title of the first post.
+    console.log("Observer Updated");
   }
 }
 
-// TODO: Instantiate the Subject, add observers, and call the fetchAndNotify method
+const subject = new Subject();
+
+const observer = new Observer();
+const observer2 = new Observer();
+
+subject.addObserver(observer);
+subject.addObserver(observer2);
+subject.removeObserver(observer);
+subject.notifyObservers();
+
+subject.fetchAndNotify();
