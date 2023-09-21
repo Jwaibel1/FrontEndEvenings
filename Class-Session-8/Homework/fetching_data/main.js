@@ -105,6 +105,7 @@ function removeBookmark(event) {
   storeBookmarks(bookmarks);
 
   console.dir(index);
+  event.preventDefault();
 }
 
 function storeBookmarks(bookmarks = []) {
