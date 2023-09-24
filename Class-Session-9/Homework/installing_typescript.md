@@ -7,6 +7,6 @@ Global TypeScript install:
 
 1. Install via npm - npm install-g typescript
 
-Configure the TypeScript complier
+Configure the TypeScript compiler
 
 1. npx tsc --init
