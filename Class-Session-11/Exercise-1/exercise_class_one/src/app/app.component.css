@@ -1,0 +1,14 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  color: blue;
+  font-size: 4rem;
+}
+p {
+  display: flex;
+  justify-content: center;
+  border: 3px solid black;
+  background-color: aqua;
+  font-weight: bolder;
+  font-size: 2rem;
+}
